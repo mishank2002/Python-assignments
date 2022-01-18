@@ -11,14 +11,13 @@ print("\n")
 
 #QUESTION 2
 NAME=input("ENTER YOUR NAME")
-SID=input("ENTER YOUR SID")
+SID=int(input("ENTER YOUR SID"))
 DEPARTMENT=input("ENTER YOUR DEPARTMENT")
-CGPA=input("ENTER YOUR CGPA")
-print("Hey,",NAME,"Here!")
-print("My SID is ",SID)
-print("I am from ",DEPARTMENT,"and my CGPA is ",CGPA)
+CGPA=float(input("ENTER YOUR CGPA"))
+print("Hey %s,"%NAME,"Here!")
+print("My SID is %d" %SID)
+print("I am from %s"%DEPARTMENT,"and my CGPA is %f"%CGPA)
 print("\n")
-
 
 #QUESTION 3
 a=56
