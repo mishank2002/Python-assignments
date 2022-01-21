@@ -48,7 +48,7 @@ print("\n")
 
 #QUESTION 5
 s=input("ENTER A STRING")
-if (s.find('name') != -1):
+if 'name' in s:
     print ("Yes")
 else:
     print ("No")
