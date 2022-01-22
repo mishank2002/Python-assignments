@@ -58,15 +58,10 @@ print("\n")
 a=int(input("ENTER FIRST SIDE OF TRIANGLE"))
 b=int(input("ENTER SECOND SIDE OF TRIANGLE"))
 c=int(input("ENTER THIRD SIDE OF TRIANGLE"))
-if(a>(b+c)):
-    print("No")
-elif(b>(a+c)):
-    print("No")
-elif(c>(a+b)):
-    print("No")
-else:
+if((a+b)>c and (b+c)>a and (c+a)>b):
     print("Yes")
-print("\n")
-
+else:
+    print("No")
+ 
     
 
