@@ -58,7 +58,7 @@ print("\n")
 a=int(input("ENTER FIRST SIDE OF TRIANGLE"))
 b=int(input("ENTER SECOND SIDE OF TRIANGLE"))
 c=int(input("ENTER THIRD SIDE OF TRIANGLE"))
-if((a+b)>c and (b+c)>a and (c+a)>b and (a,b,c)>0): #All sides should be positive and sum of two sides should be greater than third side
+if((a+b)>c and (b+c)>a and (c+a)>b and a>0 and b>0 and c>0): #All sides should be positive and sum of two sides should be greater than third side
     print("Yes")
 else:
     print("No")
