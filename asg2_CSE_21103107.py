@@ -31,9 +31,9 @@ print("\n")
 
 
 #QUESTION 4
-num1 = int(input("Enter first number: "))
-num2 = int(input("Enter second number: "))
-num3 = int(input("Enter third number: "))
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+num3 = float(input("Enter third number: "))
  
 if (num1 >=num2) and (num1 >=num3):
    largest = num1
@@ -57,9 +57,9 @@ print("\n")
 
 
 #QUESTION 6
-a=int(input("ENTER FIRST SIDE OF TRIANGLE"))
-b=int(input("ENTER SECOND SIDE OF TRIANGLE"))
-c=int(input("ENTER THIRD SIDE OF TRIANGLE"))
+a=float(input("ENTER FIRST SIDE OF TRIANGLE"))
+b=float(input("ENTER SECOND SIDE OF TRIANGLE"))
+c=float(input("ENTER THIRD SIDE OF TRIANGLE"))
 if(a>=(b+c)):      #Equality sign is used because if sum of two sides is equal to third then also triangle is not valid
     print("No")
 elif(b>=(a+c)):
