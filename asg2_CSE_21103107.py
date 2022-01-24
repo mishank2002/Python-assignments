@@ -54,14 +54,18 @@ else:
     print ("No")
 print("\n")
 
+
 #QUESTION 6
 a=int(input("ENTER FIRST SIDE OF TRIANGLE"))
 b=int(input("ENTER SECOND SIDE OF TRIANGLE"))
 c=int(input("ENTER THIRD SIDE OF TRIANGLE"))
-if((a+b)>c and (b+c)>a and (c+a)>b and a>0 and b>0 and c>0): #All sides should be positive and sum of two sides should be greater than third side
-    print("Yes")
-else:
+if(a>=(b+c)):      #Equality sign is used because if sum of two sides is equal to third then also triangle is not valid
     print("No")
- 
-    
+elif(b>=(a+c)):
+    print("No")
+elif(c>=(a+b)):
+    print("No")
+else:
+    print("Yes")    
+
 
