@@ -41,7 +41,7 @@ elif (num2 >=num1) and (num2 >=num3):
    largest = num2
 else:
    largest = num3
- 
+#If all numbers are equal then also same number will be printed 
 print("THE LARGEST NUMBER IS ",largest)
 print("\n")
 
