@@ -162,7 +162,6 @@ print("<A>: ",dic)#printing the dictionary
 sort_by_name={k:v for k,v in sorted(dic.items(),key=lambda v:v[1])} #sorting dictionary by values i.e by name as per the question
 print("<B>",sort_by_name)
 sort_by_sid={k:v for k,v in sorted(dic.items())}#sorting dictionary by keys i.e by SID as per the question
-print("<B>",sort_by_name)
 print("<C>",sort_by_sid)
 print("<D>",dic[21103107])#Searching a student whose SID is 21103107
 print("\n")
