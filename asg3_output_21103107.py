@@ -74,6 +74,8 @@ Fibonacci sequence:
 21
 34
 AVERAGE OF RESULTANT FIBONACCI SERIES IS 8.8
+
+
 QUESTION 8
 <a> {1, 3, 5, 6, 8}
 <a> {3, 6, 8, 9, 13, 17}
