@@ -22,9 +22,24 @@ print("\n")
 
 #QUESTION2
 print("QUESTION 2")
-day=int(input("ENTER THE DAY: "))
-month=int(input("ENTER THE MONTH OF THE YEAR: "))
-year=int(input("ENTER THE YEAR: "))
+while(True):                 #while loop is used so that if any wrong value is entered  then values will be entered again
+    day=int(input("ENTER THE DAY: "))
+    if(1<=day<=31):
+        break
+    else:
+        print("Please Enter a valid day")
+while(True):                  #while loop is used so that if any wrong value is entered  then values will be entered again
+    month=int(input("ENTER THE MONTH OF THE YEAR: "))
+    if(1<=month<=12):
+        break
+    else:
+        print("Please Enter a valid month")
+while(True):                #while loop is used so that if any wrong value is entered  then values will be entered again
+    year=int(input("ENTER THE YEAR: "))
+    if(1800<=year<=2025):
+        break
+    else:
+        print("Please Enter year from 1800 to 2025 only")
 if(month==(1 or 3 or 5 or 7 or 8 or 10) ):    
     if(day==31):
         day=1
@@ -84,6 +99,7 @@ elif(month==12):
 else:
     print("PLEASE ENTER A CORRECT DATE")
 print("\n")
+
 
 #QUESTION3
 print("QUESTION 3")
@@ -185,11 +201,11 @@ print("<a>", Part_A_Set)
 
 # part b(Subtracting intersection of sets taken two at a time from the Union of all three sets)
 Part_B_Set = Set1.union(Set2.union(Set3)) - Set1.intersection(Set2) - Set2.intersection(Set3) - Set3.intersection(Set1)
-print("<a>", Part_B_Set)
+print("<b>", Part_B_Set)
 
 # part c(Subtracting the intersection of all three sets from the Intersection of sets taken two at a time)
 Part_C_Set=((Set1.intersection(Set2)).union((Set1.intersection(Set3)).union(Set2.intersection(Set3))))-(Set1.intersection(Set2.intersection(Set3)))
-print("<b>",Part_B_Set)
+print("<c>",Part_C_Set)
 # part d(Excluding the numbers from 1 to 10 that are occuring in Set1)
 Part_D_Set = set()
 for i in range(1, 11):
