@@ -78,7 +78,7 @@ AVERAGE OF RESULTANT FIBONACCI SERIES IS 8.8
 
 QUESTION 8
 <a> {1, 3, 5, 6, 8}
-<a> {3, 6, 8, 9, 13, 17}
 <b> {3, 6, 8, 9, 13, 17}
+<c> {1,2,4,5}
 <d> {6, 7, 8, 9, 10}
 <e> {10, 7}
