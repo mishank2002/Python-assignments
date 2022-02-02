@@ -133,7 +133,7 @@ print("\n")
 
 #QUESTION6
 print("QUESTION 6")
-dic=dict() #initializing an empty dictionary 
+dic={}#initializing an empty dictionary 
 while True:
    name=str(input("ENTER YOUR NAME OR PRESS N TO STOP ")) #If a user wants to break the loop he can enter N or n
    if(name=='N'or name=='n'):
