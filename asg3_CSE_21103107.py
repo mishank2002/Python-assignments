@@ -20,9 +20,17 @@ else:                   #else statement eill be implemented when more than one w
 print("\n")
 
 
+
 #QUESTION2
+from subprocess import list2cmdline
+
+
 print("QUESTION 2")
 def Next_Date():
+    list1=[1,3,5,7,8]
+    list2=[4,6,9,11]
+    list3=[2]
+    list4=[12]
     while(True):                 #while loop is used so that if any wrong value is entered  then values will be entered again
         day=int(input("ENTER THE DAY: "))
         if(1<=day<=31):
@@ -41,7 +49,7 @@ def Next_Date():
             break
         else:
             print("Please Enter year from 1800 to 2025 only")
-    if(month==(1 or 3 or 5 or 7 or 8 or 10) ):    
+    if month in list1 :    
         if(day==31):
             day=1
             month=month+1
@@ -53,7 +61,7 @@ def Next_Date():
             print("INVALID DATE TRY AGAIN")
             Next_Date()
     
-    elif(month== (4 or 6 or 9 or 11) ):
+    elif month in list2 :
         if(day==30):
             day=1
             month=month+1  
@@ -64,10 +72,8 @@ def Next_Date():
         else:
             print("INVALID DATE TRY AGAIN") 
             Next_Date()      
-    elif(month== 2):
-        if((year % 400 == 0) or  
-        (year % 100 != 0) and  
-        (year % 4 == 0)):   
+    elif month in list3:
+        if(year % 4 == 0):  
             if(day==29):
                 day=1
                 month=month+1
@@ -89,7 +95,7 @@ def Next_Date():
             else:
                 print("INVALID DATE TRY AGAIN")
                 Next_Date()
-    elif(month==12):
+    elif month in list4:
         if(day==31):
             day=1
             month=1
@@ -107,6 +113,7 @@ def Next_Date():
         Next_Date()
 Next_Date()
 print("\n")
+
 
 
 #QUESTION3
