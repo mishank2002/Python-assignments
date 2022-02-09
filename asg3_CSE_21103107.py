@@ -22,102 +22,123 @@ print("\n")
 
 #QUESTION2
 print("QUESTION 2")
-while(True):                 #while loop is used so that if any wrong value is entered  then values will be entered again
-    day=int(input("ENTER THE DAY: "))
-    if(1<=day<=31):
-        break
-    else:
-        print("Please Enter a valid day")
-while(True):                  #while loop is used so that if any wrong value is entered  then values will be entered again
-    month=int(input("ENTER THE MONTH OF THE YEAR: "))
-    if(1<=month<=12):
-        break
-    else:
-        print("Please Enter a valid month")
-while(True):                #while loop is used so that if any wrong value is entered  then values will be entered again
-    year=int(input("ENTER THE YEAR: "))
-    if(1800<=year<=2025):
-        break
-    else:
-        print("Please Enter year from 1800 to 2025 only")
-if(month==(1 or 3 or 5 or 7 or 8 or 10) ):    
-    if(day==31):
-        day=1
-        month=month+1
-        print(day,"/",month,"/",year)
-    elif(day<31):
-        day+=1
-        print(day,"/",month,"/",year)
-    else:
-        print("PLEASE ENTER CORRECT DATE")
-
-elif(month== (4 or 6 or 9 or 11) ):
-    if(day==30):
-        day=1
-        month=month+1  
-        print(day,"/",month,"/",year)   
-    elif(day<30):
-        day+=1
-        print(day,"/",month,"/",year)
-    else:
-        print("PLEASE ENTER CORRECT DATE")       
-elif(month== 2):
-    if((year % 400 == 0) or  
-    (year % 100 != 0) and  
-    (year % 4 == 0)):   
-        if(day==29):
+def Next_Date():
+    while(True):                 #while loop is used so that if any wrong value is entered  then values will be entered again
+        day=int(input("ENTER THE DAY: "))
+        if(1<=day<=31):
+            break
+        else:
+            print("Please Enter a valid day")
+    while(True):                  #while loop is used so that if any wrong value is entered  then values will be entered again
+        month=int(input("ENTER THE MONTH OF THE YEAR: "))
+        if(1<=month<=12):
+            break
+        else:
+            print("Please Enter a valid month")
+    while(True):                #while loop is used so that if any wrong value is entered  then values will be entered again
+        year=int(input("ENTER THE YEAR: "))
+        if(1800<=year<=2025):
+            break
+        else:
+            print("Please Enter year from 1800 to 2025 only")
+    if(month==(1 or 3 or 5 or 7 or 8 or 10) ):    
+        if(day==31):
             day=1
             month=month+1
             print(day,"/",month,"/",year)
-        elif(day<29):
+        elif(day<31):
             day+=1
             print(day,"/",month,"/",year)
         else:
-            print("PLEASE ENTER CORRECT DATE")
-    else:
-        if(day==28):
-            day=1
-            month+=1
-            print(day,"/",month,"/",year)
-        elif(day<28):
-            day+=1
-            print(day,"/",month,"/",year)
-        else:
-            print("PLEASE ENTER CORRECT DATE")
-elif(month==12):
-    if(day==31):
-        day=1
-        month=1
-        year+=1  
-        print(day,"/",month,"/",year)
-    elif(day<31):
-        day+=1;
-        print(day,"/",month,"/",year)
-    else:
-        print("PLEASE ENTER CORRECT DATE")
+            print("INVALID DATE TRY AGAIN")
+            Next_Date()
     
-else:
-    print("PLEASE ENTER A CORRECT DATE")
+    elif(month== (4 or 6 or 9 or 11) ):
+        if(day==30):
+            day=1
+            month=month+1  
+            print(day,"/",month,"/",year)   
+        elif(day<30):
+            day+=1
+            print(day,"/",month,"/",year)
+        else:
+            print("INVALID DATE TRY AGAIN") 
+            Next_Date()      
+    elif(month== 2):
+        if((year % 400 == 0) or  
+        (year % 100 != 0) and  
+        (year % 4 == 0)):   
+            if(day==29):
+                day=1
+                month=month+1
+                print(day,"/",month,"/",year)
+            elif(day<29):
+                day+=1
+                print(day,"/",month,"/",year)
+            else:
+                print("INVALID DATE TRY AGAIN")
+                Next_Date()
+        else:
+            if(day==28):
+                day=1
+                month+=1
+                print(day,"/",month,"/",year)
+            elif(day<28):
+                day+=1
+                print(day,"/",month,"/",year)
+            else:
+                print("INVALID DATE TRY AGAIN")
+                Next_Date()
+    elif(month==12):
+        if(day==31):
+            day=1
+            month=1
+            year+=1  
+            print(day,"/",month,"/",year)
+        elif(day<31):
+            day+=1;
+            print(day,"/",month,"/",year)
+        else:
+            print("INVALID DATE TRY AGAIN")
+            Next_Date()
+        
+    else:
+        print("INVALID DATE TRY AGAIN")
+        Next_Date()
+Next_Date()
 print("\n")
 
 
 #QUESTION3
 print("QUESTION 3")
-list = [3, 9, 10]
-print("LIST IS ")
-print(list)
-print("The resultant list of tuple is :")
-result = [(val, pow(val, 2)) for val in list]
-print(result)
+inputlist = input('Enter elements of a list separated by space ')
+user_list = inputlist.split()
+# print list
+print('list: ', inputlist)
+
+# convert each item to int type
+for i in range(len(user_list)):
+    # convert each item to int type
+    user_list[i] = int(user_list[i])
+squarelist =[(user_list[i], user_list[i]**2) for i in range(len(user_list))]
+
+print(squarelist)
+
 print("\n")
 
 
 #QUESTION4
 print("QUESTION 4")
-grade=int(input("ENTER YOUR GRADE BETWEEN 4 TO 10: "))
-if(grade>10 or grade<4):
-    print("PLEASE ENTER CORRECT GRADE")
-elif(grade==4):
+
+def input_point():
+    point = int(input("Enter Grade Point: "))
+    # check if the grade point meets the conditions
+    if point>10 or point<4:
+        print("Invalid grade point! Try Again")
+        point = input_point()
+    return point
+grade=input_point()
+if(grade==4):
     print("Your Grade is 'D' and poor performance")
 elif(grade==5):
     print("Your Grade is 'C' and Below Average performance")
@@ -149,22 +170,33 @@ print("\n")
 
 #QUESTION6
 print("QUESTION 6")
-dic={}#initializing an empty dictionary 
+sid = int(input("Enter SID: "))
+name = input("Enter Name: ")
+students = {sid:name}
+
 while True:
-   name=str(input("ENTER YOUR NAME OR PRESS N TO STOP ")) #If a user wants to break the loop he can enter N or n
-   if(name=='N'or name=='n'):
-       break
-   SID=int(input("ENTER YOUR SID OR PRESS N TO STOP "))  #If a user wants to break the loop he can enter N or n
-   if(SID=='N'or SID=='n'):
-       break
-   dic[SID]=name            #Keys are SID and Values are name
-print("<A>: ",dic)#printing the dictionary
-sort_by_name={k:v for k,v in sorted(dic.items(),key=lambda v:v[1])} #sorting dictionary by values i.e by name as per the question
-print("<B>",sort_by_name)
-sort_by_sid={k:v for k,v in sorted(dic.items())}#sorting dictionary by keys i.e by SID as per the question
-print("<C>",sort_by_sid)
-print("<D>",dic[21103107])#Searching a student whose SID is 21103107
-print("\n")
+    option = input("Do you want to enter another student entry(Y or N):").upper()
+    if option == 'Y':
+        sid = int(input("Enter SID: "))
+        name = input("Enter Name: ")
+        students[sid] = name
+    elif option == 'N':
+        break
+    else:
+        print('Invalid input!')
+
+#part a. print the dictionary
+print("<a>",students)
+
+#part b. sort acc to the names
+print("<b>",{k:v for k,v in sorted(students.items(), key= lambda x:x[1])})
+
+#part c. sort acc to the SIDs
+print("<c>",{k:v for k,v in sorted(students.items())})
+
+#part d. search for a student by their SID
+sid = int(input("Search Name with SID: "))
+print("<d>",students[sid])
 
 #QUESTION7
 print("QUESTION 7")
