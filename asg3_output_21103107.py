@@ -3,8 +3,8 @@ Type "help", "copyright", "credits" or "license()" for more information.
 
 =================== RESTART: /Users/mishankkumar/Desktop/p.py ==================
 QUESTION 1
-ENTER ANY STRING: MISHANK
-{'M': 1, 'I': 1, 'S': 1, 'H': 1, 'A': 1, 'N': 1, 'K': 1}
+ENTER ANY STRING: mishank
+{'m': 1, 'i': 1, 's': 1, 'h': 1, 'a': 1, 'n': 1, 'k': 1}
 
 
 QUESTION 2
