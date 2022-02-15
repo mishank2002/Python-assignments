@@ -185,7 +185,7 @@ students = {sid:name}
 while True:
     option = input("Do you want to enter another student entry(Y or N):").upper()
     if option == 'Y':
-        sid = int(input("Enter SID: "))
+        sid = int(input("Enter UNIQUE SID: "))
         name = input("Enter Name: ")
         students[sid] = name
     elif option == 'N':
