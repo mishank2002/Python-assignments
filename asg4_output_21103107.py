@@ -13,13 +13,22 @@ Move disk 1 from rod A to rod C
 
 
 ANSWER 2
-Enter the size of pascals triangle 6
-       1 
-      1 1 
-     1 2 1 
-    1 3 3 1 
-   1 4 6 4 1 
-  1 5 10 10 5 1 
+Enter the size of pascals triangle 5
+USING LOOPS
+      1 
+     1 1 
+    1 2 1 
+   1 3 3 1 
+  1 4 6 4 1 
+
+
+
+USING RECURSSIONS
+        1   
+      1   1   
+    1   2   1   
+  1   3   3   1   
+1   4   6   4   1   
 
 
 ANSWER 3
@@ -45,7 +54,7 @@ ANSWER 5
 <b>Record of Viren deleted
 
 ANSWER 6
-Enter the word: lead
-Enter a new meaningful word using the exact same letters to test your friendship: deal
+Enter the word: deal
+Enter a new meaningful word using the exact same letters to test your friendship: lead
 Does the word makes sense?(y/Y or n/N )y
 The friends pass the friendship test
